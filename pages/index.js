@@ -10,6 +10,8 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
+import { useEffect, useState } from 'react';
+import fs from 'fs';
 
 // Local Data
 import data from "../data/portfolio.json";
