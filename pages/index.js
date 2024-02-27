@@ -23,21 +23,6 @@ export default function Home() {
   const textThree = useRef();
   const textFour = useRef();
 
-    // Content to be inserted into {data.aboutpara}
-  const aboutParaContent = (
-    <>
-      <p>Hey there🙋, I'm Lei Zhu, a recent graduate with a Bachelor of Engineering in Computer Science and Technology from University of Electronic Science and Technology of China (UESTC) 电子科技大学 and pursuing my Master's degree in Information Science at UIUC.</p>
-      <p>Throughout my academic and professional journey, I have passionately pursued opportunities to expand my expertise in software development and data analysis, culminating in a series of internships and projects that have significantly honed my skills and prepared me for the challenges of the tech industry.</p>
-      // Add the rest of the provided content here
-      <p>Welcome to my website, where I share my journey, experiences, and passion for all things. Let's connect and explore the exciting world of science and engineering together!</p>
-    </>
-  );
-
-  // Assuming 'data' is a local variable in the component
-  const data = {
-    aboutpara: aboutParaContent,
-  };
-
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
