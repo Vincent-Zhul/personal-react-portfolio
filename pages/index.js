@@ -10,8 +10,6 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
-import { useEffect, useState } from 'react';
-import fs from 'fs';
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -24,15 +22,6 @@ export default function Home() {
   const textTwo = useRef();
   const textThree = useRef();
   const textFour = useRef();
-
-  const [aboutContent, setAboutContent] = useState('');
-
-  useEffect(() => {
-    // This is assuming you are using server-side rendering or getStaticProps/getServerSideProps
-    // If you are doing this client-side, you'd need to fetch the content from a server endpoint
-    const content = fs.readFileSync('/path/to/about.md', 'utf8');
-    setAboutContent(content);
-  }, []);
 
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -143,7 +132,7 @@ export default function Home() {
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {aboutContent}
+            {data.about}
           </p>
         </div>
         <Footer />
